@@ -1,0 +1,106 @@
+{
+  "projectInfo": {
+    "name": "헤리스톤",
+    "totalAmount": 956400000,
+    "contractDate": "2024-07-24",
+    "completionDate": "2027-12-15",
+    "defaultInterestRate": 5.0
+  },
+  "options": [
+    { "id": 1, "name": "발코니 확장", "price": 10670000 },
+    { "id": 2, "name": "식기 세척기", "price": 1400000 },
+    { "id": 3, "name": "시스템 에어컨", "price": 7500000 }
+  ],
+  "paymentPlan": [
+    {
+      "id": 1,
+      "name": "1차 계약금",
+      "plannedAmount": 20000000,
+      "dueDate": "2024-07-24",
+      "memo": "계약 체결",
+      "interestRate": 0.0,
+      "paidAmount": 0,
+      "paymentHistory": []
+    },
+    {
+      "id": 2,
+      "name": "2차 계약금",
+      "plannedAmount": 75640000,
+      "dueDate": "2024-08-24",
+      "memo": "착공",
+      "interestRate": 0,
+      "paidAmount": 0,
+      "paymentHistory": []
+    },
+    {
+      "id": 3,
+      "name": "1차 중도금",
+      "plannedAmount": 95640000,
+      "dueDate": "2024-11-15",
+      "memo": "골조 완성",
+      "interestRate": 3.83,
+      "paidAmount": 0,
+      "paymentHistory": []
+    },
+    {
+      "id": 4,
+      "name": "2차 중도금",
+      "plannedAmount": 95640000,
+      "dueDate": "2025-05-15",
+      "memo": "마감 공사",
+      "interestRate": 3.72,
+      "paidAmount": 0,
+      "paymentHistory": []
+    },
+    {
+      "id": 5,
+      "name": "3차 중도금",
+      "plannedAmount": 95640000,
+      "dueDate": "2025-11-15",
+      "memo": "내부 마감",
+      "interestRate": 4.0,
+      "paidAmount": 0,
+      "paymentHistory": []
+    },
+    {
+      "id": 6,
+      "name": "4차 중도금",
+      "plannedAmount": 95640000,
+      "dueDate": "2026-05-15",
+      "memo": "전기 설비",
+      "interestRate": 4.0,
+      "paidAmount": 0,
+      "paymentHistory": []
+    },
+    {
+      "id": 7,
+      "name": "5차 중도금",
+      "plannedAmount": 95640000,
+      "dueDate": "2026-11-15",
+      "memo": "도장 공사",
+      "interestRate": 4.0,
+      "paidAmount": 0,
+      "paymentHistory": []
+    },
+    {
+      "id": 8,
+      "name": "6차 중도금",
+      "plannedAmount": 95640000,
+      "dueDate": "2027-05-15",
+      "memo": "최종 검수",
+      "interestRate": 5.0,
+      "paidAmount": 0,
+      "paymentHistory": []
+    },
+    {
+      "id": 9,
+      "name": "잔금",
+      "plannedAmount": 286920000,
+      "dueDate": "2027-12-15",
+      "memo": "입주",
+      "interestRate": 0.0,
+      "paidAmount": 0,
+      "paymentHistory": []
+    }
+  ]
+}
