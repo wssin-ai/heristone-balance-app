@@ -183,6 +183,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                     <p><strong>2. 이자율 설정:</strong> 각 중도금별로 개별 이자율을 설정할 수 있습니다.</p>
                     <p><strong>3. 자동 계산:</strong> 입력하면 진행률, 이자, 남은 금액이 자동으로 계산됩니다.</p>
                     <p><strong>4. 편집하기:</strong> 모든 숫자와 텍스트를 클릭하면 바로 수정할 수 있습니다.</p>
+                    <p><strong>5. 다음일정:</strong> 10만원 미만은 다음일정으로 잡히지 않습니다.</p>
                 </div>
             </div>
         </div>
