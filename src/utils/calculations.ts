@@ -1,4 +1,4 @@
-import { PaymentPlan, ProjectInfo, Option, DashboardStats, NextPaymentInfo } from '@/types';
+import {PaymentPlan, ProjectInfo, Option, DashboardStats, NextPaymentInfo} from '@/types';
 
 export const calculateAccruedInterest = (
     paymentPlan: PaymentPlan[],
@@ -48,7 +48,7 @@ export const getNextPaymentInfo = (
     const diffTime = nextDate.getTime() - currentDate.getTime();
     const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 
-    return { plan: nextPlan, dday: diffDays };
+    return {plan: nextPlan, dday: diffDays};
 };
 
 export const calculateDashboardStats = (
@@ -57,10 +57,16 @@ export const calculateDashboardStats = (
     options: Option[]
 ): DashboardStats => {
     const totalPaid = paymentPlan.reduce((sum, plan) => sum + plan.paidAmount, 0);
-    const remainingAmount = projectInfo.totalAmount - totalPaid;
+    const totalPlanned = paymentPlan.reduce((sum, plan) => sum + plan.plannedAmount, 0);
+
+    // 수정된 부분: 계획된 총 중도금에서 납부한 금액을 빼서 남은 금액 계산
+    const remainingAmount = totalPlanned - totalPaid;
+
     const accruedInterest = calculateAccruedInterest(paymentPlan, projectInfo.contractDate);
     const totalEstimatedInterest = calculateTotalEstimatedInterest(paymentPlan, projectInfo.contractDate);
-    const progressPercentage = (totalPaid / projectInfo.totalAmount) * 100;
+
+    // 진행률도 계획된 총액 기준으로 계산
+    const progressPercentage = totalPlanned > 0 ? (totalPaid / totalPlanned) * 100 : 0;
     const totalOptions = options.reduce((sum, option) => sum + option.price, 0);
 
     return {
